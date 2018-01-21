@@ -1,61 +1,62 @@
-import React, {Component} from 'react';
-import styled from 'styled-components';
+import React, {Component} from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import Grid from 'react-css-grid'
 import logo from '../img/logo.png'
 
-export default class Header extends Component {
-  render() {
-    return (
-      <div>
-        <HeaderGrid >
-          <SearchDiv/>
-          <Logo/>
-          <Social>
-            <a href='https://facebook.com/saintthomasaquinascookeville'>
-              <FacebookBtn/>
-            </a>
-            <a
-              href='https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=LlvaBlCXmbvIkUuFAt-bgG4n1bx7EGDfXvacmoYbpOHZrUJlPQiCC6Aznn3HQnXMDok6z3A8wOdiKHYzjfh7oNnZWltx2hpQpEq9Hc9FikrVwg6DoI1HaYuhBdu6ZZZfOAP9FdQAJOc-0hY_z1RsTxirfa8OUqd_8wtT_bKFXIw5JFP5mKoFPm1O-u1W3fe0JQrfyRl2Gi87noGl1RDR5w==&ver=3'>
-              <DonateBtn>Support Our Church</DonateBtn>
-            </a>
-          </Social>
-        </HeaderGrid>
-        <Nav>
-          <li>
-            <NavLink href="/">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href="/about">
-              About Our Church
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href="/community">
-              Join Our Community
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href="/events">
-              Bulletin & Events
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href="/growth">
-              Spiritual Growth
-            </NavLink>
-          </li>
-          <li>
-            <NavLink href="/contact">
-              Contact Us
-            </NavLink>
-          </li>
-        </Nav>
-      </div>
-    );
-  }
+const Header = () => {
+  return (
+    <div>
+      <HeaderGrid >
+        <SearchDiv/>
+        <Logo/>
+        <Social>
+          <a href='https://facebook.com/saintthomasaquinascookeville'>
+            <FacebookBtn/>
+          </a>
+          <a
+            href='https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=LlvaBlCXmbvIkUuFAt-bgG4n1bx7EGDfXvacmoYbpOHZrUJlPQiCC6Aznn3HQnXMDok6z3A8wOdiKHYzjfh7oNnZWltx2hpQpEq9Hc9FikrVwg6DoI1HaYuhBdu6ZZZfOAP9FdQAJOc-0hY_z1RsTxirfa8OUqd_8wtT_bKFXIw5JFP5mKoFPm1O-u1W3fe0JQrfyRl2Gi87noGl1RDR5w==&ver=3'>
+            <DonateBtn>Support Our Church</DonateBtn>
+          </a>
+        </Social>
+      </HeaderGrid>
+      <Nav>
+        <li>
+          <NavLink to="/">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">
+            About Our Church
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/community">
+            Join Our Community
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/events">
+            Bulletin & Events
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/growth">
+            Spiritual Growth
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">
+            Contact Us
+          </NavLink>
+        </li>
+      </Nav>
+    </div>
+  );
 };
+
+export default Header;
 
 const HeaderGrid = styled(Grid)`
 background: #FDFCF8;
@@ -80,7 +81,7 @@ li {
   }
 }`
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
 font-size: 1em;`
 
 const Social = styled.div `
