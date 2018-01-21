@@ -1,0 +1,35 @@
+{
+  "name": "cookevillestthomas",
+  "license": "MIT",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development parcel src/index.html ",
+    "build": "cross-env NODE_ENV=production parcel build src/index.html --no-minify --public-url /"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.1",
+    "babel-preset-react-app": "^3.1.0",
+    "react": "^16.2.0",
+    "react-css-grid": "^2.0.0-0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^2.4.0"
+  },
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "not ie < 9"
+        ],
+        "flexbox": "no-2009"
+      }
+    }
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.1",
+    "parcel-bundler": "^1.4.1"
+  }
+}
