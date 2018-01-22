@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Grid from 'react-css-grid'
+import 'font-awesome/css/font-awesome.min.css';
 import logo from '../img/logo.png'
 
 const Header = () => {
@@ -17,7 +18,9 @@ const Header = () => {
               </a>
             </DonateBtn>
             <FacebookBtn>
-            <a href='https://facebook.com/saintthomasaquinascookeville'/>
+              <a href='https://facebook.com/saintthomasaquinascookeville'>
+                <i className='fa fa-facebook' aria-hidden='true'></i>
+              </a>
             </FacebookBtn>
         </Social>
       </HeaderGrid>
@@ -92,7 +95,7 @@ const DonateBtn = styled.button `
 background: #EF9F21;
 height: 35px;
 width: 200px;
-border: #EF9F20 1px solid;
+border: none;
 a {
   text-decoration: none;
   color: white;
@@ -101,4 +104,9 @@ a {
 const FacebookBtn = styled.button `
 height: 35px;
 width: 35px;
+background-color: #3b5998;
+border: none;
+i {
+  color: white;
+}
 `
