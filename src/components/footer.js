@@ -11,7 +11,7 @@ const Footer = () => {
       <CenterP>
         Phone: 931-526-2575<br/>
         Fax: 931-526-5869<br/>
-        Email: stthomasaquinas@citlink.net
+        Email: info@cookevillestthomas.org
       </CenterP>
     </FootContainer>
   );

@@ -25,6 +25,8 @@ const App = () => (
 
 const AppContainer = styled.div`
   font-family: Sans;
+  max-width: 1000px;
+  margin: 0 auto;
 `
 
 ReactDOM.render(<App />, document.getElementById('root'));
