@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import styled from 'styled-components'
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  Redirect
 } from 'react-router-dom'
 import Header from './components/header';
 import Footer from './components/footer';
@@ -14,15 +13,19 @@ import Community from './components/community';
 
 const App = () => (
   <Router>
-    <div className="App">
+    <AppContainer className="App">
       <Header/>
       <Route path="/" exact={true} component={Home} />
       <Route path="/about" component={About} />
       <Route path="/community" component={Community} />
       <Footer/>
-    </div>
+    </AppContainer>
   </Router>
 );
+
+const AppContainer = styled.div`
+  font-family: Sans;
+`
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
