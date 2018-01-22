@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Grid from 'react-css-grid'
@@ -73,26 +73,6 @@ justify-center: center;
 margin: 0 auto;
 max-width: 350px;`
 
-const Nav = styled.ul `
-display: flex;
-justify-content: center;
-list-style-type: none;
-li {
-  padding: 0.5em;
-  a {
-    color: #EF9F21;          
-  }
-}`
-
-const NavLink = styled(Link)`
-font-size: 1em;
-text-decoration: none;
-:hover {
-  background-color: #3b5998;
-  color: white;
-}
-`
-
 const Social = styled.div `
 display:flex;
 margin-right: 10px;
@@ -114,6 +94,27 @@ width: 35px;
 background-color: #3b5998;
 border: none;
 i {
+  color: white;
+}
+`
+
+const Nav = styled.ul `
+display: flex;
+justify-content: center;
+list-style-type: none;
+li {
+  padding: 0.5em;
+  a {
+    color: #EF9F21;          
+  }
+}`
+
+const NavLink = styled(Link)`
+font-size: 1em;
+text-decoration: none;
+padding: 10px;
+:hover {
+  background-color: #262161;
   color: white;
 }
 `
