@@ -9,9 +9,9 @@ export default class Card extends Component {
   render() {
     return (
       <SquareCard>
-        <h3>
+        <Header>
           {this.props.header}
-        </h3>
+        </Header>
         <Dashes/>
         <div>
           {this.props.children}
@@ -33,6 +33,10 @@ const SquareCard = styled.div `
   div {
     color: gray;
   }
+`
+const Header = styled.h3`
+  text-transform: uppercase;
+  text-align: center;
 `
 const Dashes = styled.hr`
   border-top: dashed 1px #dcdcdc;

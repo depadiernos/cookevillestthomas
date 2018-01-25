@@ -4,6 +4,8 @@ import Events from './events'
 import Readings from './readings'
 import Prayers from './prayers'
 import Bulletin from './bulletin'
+import Location from './location'
+import MassTimes from './masstimes'
 
 export default class Home extends Component {
   render() {
@@ -19,7 +21,8 @@ export default class Home extends Component {
         </CardContainer>
         <Bulletin/>
         <InfoContainer>
-
+          <MassTimes/>
+          <Location/>
         </InfoContainer>
       </div>
     )
@@ -49,8 +52,19 @@ const NewsContainer = styled.div`
 `
 
 const InfoContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
   width: calc(100% - 20px);
-  height: 200px;
+  height: 400px;
   border: 1px solid;
   margin: 10px auto;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
+    height 600px;
+    div {
+      width: 80%;
+    }
 `
