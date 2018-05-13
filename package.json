@@ -5,8 +5,8 @@
   "repository": "github:depadiernos/cookevillestthomas",
   "description": "website for St Thomas Aquinas Church in Cookeville",
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel src/index.html ",
-    "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url /"
+    "start": "NODE_ENV=development parcel src/index.html ",
+    "build": "NODE_ENV=production parcel build src/index.html --public-url /"
   },
   "dependencies": {
     "autoprefixer": "^7.2.1",

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components'
 
-class MassTimes extends Component {
-  render() {
+const MassTimes = () => {
     return (
         <div>
           <h3>Mass & Confession Schedule</h3>
@@ -19,7 +19,6 @@ class MassTimes extends Component {
           <span>All are invited to pray the Rosary every Saturday at 4:30PM</span>
         </div>
     )
-  }
 }
 
 export default MassTimes

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import Events from './events'
 import Readings from './readings'
@@ -7,8 +7,7 @@ import Bulletin from './bulletin'
 import Location from './location'
 import MassTimes from './masstimes'
 
-export default class Home extends Component {
-  render() {
+const Home = () => {
     return (
       <div>
         <NewsContainer>
@@ -26,8 +25,9 @@ export default class Home extends Component {
         </InfoContainer>
       </div>
     )
-  }
 }
+
+export default Home
 
 const CardContainer = styled.div`
   display: grid;

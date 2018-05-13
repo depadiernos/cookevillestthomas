@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 
-class Bulletin extends Component {
-  render() {
+const Bulletin = () => {
     return (
       <div>
       <BulletinHeader>Weekly Bulletin</BulletinHeader>
@@ -40,7 +39,6 @@ class Bulletin extends Component {
       <CalendarSelector> <i className='fa fa-calendar'/> Select Bulletin from calendar</CalendarSelector>
       </div>
     )
-  }
 }
 
 export default Bulletin
