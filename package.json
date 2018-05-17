@@ -9,15 +9,24 @@
     "build": "NODE_ENV=production parcel build src/index.html --public-url /"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/react-fontawesome": "0.0.20",
     "autoprefixer": "^7.2.1",
     "babel-preset-react-app": "^3.1.0",
     "font-awesome": "^4.7.0",
     "google-map-react": "^0.29.0",
+    "nano-css": "^1.17.2",
     "react": "^16.2.0",
+    "react-burger-menu": "^2.4.4",
     "react-css-grid": "^2.0.0-0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
+    "react-responsive": "^4.1.0",
     "react-router-dom": "^4.2.2",
+    "react-waypoint": "^8.0.1",
     "styled-components": "^2.4.0"
   },
   "postcss": {
