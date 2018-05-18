@@ -1,29 +1,39 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import styled from 'styled-components'
+import { injectGlobal } from 'styled-components'
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './components/home';
 import About from './components/about';
 import Community from './components/community';
+import Growth from './components/growth';
+import Contact from './components/contact';
+import News from './components/news';
+
 
 const App = () => (
   <Router>
-    <AppContainer className="App">
+    <Fragment>
       <Header/>
-      <Route path="/" exact={true} component={Home} />
+      <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
       <Route path="/community" component={Community} />
+      <Route path="/news" component={News} />
+      <Route path="/growth" component={Growth} />
+      <Route path="/contact" component={Contact} />
       <Footer/>
-    </AppContainer>
+    </Fragment>
   </Router>
 );
 
-const AppContainer = styled.div`
-  font-family: Sans;
-  max-width: 1000px;
-  margin: 0 auto;
+injectGlobal`
+  body {
+    font-family: Sans;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #FDFCF8;
+  }
 `
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 const About = () => {
         return (
             <div>
-                About
+                About <br/>
+                List of clergy and parish council members
             </div>
         )
 }

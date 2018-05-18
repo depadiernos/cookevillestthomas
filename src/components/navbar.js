@@ -1,39 +1,39 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <Nav>
       <li>
-        <NavLink to='/'>
+        <Link to='/' exact activeClassName={activeClassName}>
           Home
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink to='/about'>
+        <Link to='/about' activeClassName={activeClassName}>
           About Our Church
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink to='/community'>
+        <Link to='/community' activeClassName={activeClassName}>
           Join Our Community
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink to='/events'>
+        <Link to='/news' activeClassName={activeClassName}>
           Bulletin & Events
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink to='/growth'>
+        <Link to='/growth' activeClassName={activeClassName}>
           Spiritual Growth
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink to='/contact'>
+        <Link to='/contact' activeClassName={activeClassName}>
           Contact Us
-        </NavLink>
+        </Link>
       </li>
     </Nav>
   )
@@ -41,7 +41,9 @@ const Navbar = () => {
 
 export default Navbar
 
-const Nav = styled.ul`
+const activeClassName = 'nav-item-active'
+
+const Nav = styled('ul')`
   display: flex;
   justify-content: center;
   list-style-type: none;
@@ -53,10 +55,16 @@ const Nav = styled.ul`
   }
 `
 
-const NavLink = styled(Link)`
+const Link = styled(NavLink).attrs({
+   activeClassName
+ })`
   font-size: 1em;
   text-decoration: none;
   padding: 10px;
+  &.${activeClassName} {
+  background-color: #262161;
+  color: white;
+  }
   :hover {
     background-color: #262161;
     color: white;

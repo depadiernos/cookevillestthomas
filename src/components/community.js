@@ -4,7 +4,8 @@ export default class Community extends Component {
     render() {
         return (
             <div>
-                Community
+                Community <br/>
+                List of Church Organizations
             </div>
         )
     }
